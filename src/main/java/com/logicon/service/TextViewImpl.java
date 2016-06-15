@@ -13,8 +13,8 @@ public class TextViewImpl {
     public TextViewImpl(){
     }
 
-    void getMessage(String Text)
+    public void getMessage()
     {
-        System.out.println(Text);
+        System.out.println("Jarosław Kaczynski krolem naszym");
     }
 }

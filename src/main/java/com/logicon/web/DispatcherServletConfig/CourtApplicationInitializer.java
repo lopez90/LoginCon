@@ -16,6 +16,6 @@ public class CourtApplicationInitializer extends AbstractAnnotationConfigDispatc
     }
     @Override
     protected String[] getServletMappings() {
-        return new String[] {"/", "/welcome"};
+        return new String[] {"/", "/jsp"};
     }
 }

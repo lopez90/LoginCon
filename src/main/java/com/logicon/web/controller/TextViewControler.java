@@ -12,24 +12,19 @@ import com.logicon.service.TextViewImpl;
  */
 
 @Controller
-@RequestMapping("/text")
+@RequestMapping("/jsp")
 
 public class TextViewControler {
 
+    @Autowired
     TextViewImpl textViewImpl;
 
-    @Autowired
-    public void TextViewController(TextViewImpl textViewImpl)
-    {
-        this.textViewImpl=textViewImpl;
-    }
 
-   @RequestMapping(value="/text", method=RequestMethod.GET)
+   @RequestMapping(method=RequestMethod.GET)
     public String welcome(Model model)
    {
-       String newText= new String();
-       model.addAttribute("newText",newText);
-       return "Welcome";
+       textViewImpl.getMessage();
+       return "index";
    }
 
 }

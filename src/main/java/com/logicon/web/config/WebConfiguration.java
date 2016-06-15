@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("com.logicon.web")
+@ComponentScan("com.logicon")
 public class WebConfiguration {
     @Bean
     public ViewResolver internalResourceViewResolver()
