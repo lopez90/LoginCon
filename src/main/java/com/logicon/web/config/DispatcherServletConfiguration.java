@@ -1,14 +1,14 @@
-package com.logicon.web.DispatcherServletConfig;
+package com.logicon.web.config;
 
-import com.logicon.service.config.TextViewConfig;
-import com.logicon.web.config.WebConfiguration;
+import com.logicon.service.config.ServiceConfiguration;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-public class CourtApplicationInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+
+public class DispatcherServletConfiguration extends AbstractAnnotationConfigDispatcherServletInitializer {
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class<?>[] {TextViewConfig.class};
+        return new Class<?>[] {ServiceConfiguration.class};
     }
     @Override
     protected Class<?>[] getServletConfigClasses() {
@@ -16,6 +16,6 @@ public class CourtApplicationInitializer extends AbstractAnnotationConfigDispatc
     }
     @Override
     protected String[] getServletMappings() {
-        return new String[] {"/", "/jsp"};
+        return new String[] {"/"};
     }
 }

@@ -14,5 +14,7 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
     compile group: 'org.springframework', name: 'spring-webmvc', version: '4.2.6.RELEASE'
     providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
-
+    compile 'javax.servlet:jstl:1.2'
+    compile group: 'javax.xml.registry', name: 'javax.xml.registry-api', version: '1.0.5'
+    compile group: 'org.webjars', name: 'Semantic-UI', version: '2.1.8'
 }
