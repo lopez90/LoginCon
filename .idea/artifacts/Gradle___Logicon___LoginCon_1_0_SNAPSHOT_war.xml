@@ -13,7 +13,7 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Gradle: org.springframework:spring-webmvc:4.2.6.RELEASE" />
-          <element id="library" level="project" name="Gradle: javax.xml.registry:javax.xml.registry-api:1.0.5" />
+          <element id="library" level="project" name="Gradle: org.webjars:Semantic-UI:2.1.8" />
           <element id="library" level="project" name="Gradle: javax.servlet:jstl:1.2" />
           <element id="library" level="project" name="Gradle: aopalliance:aopalliance:1.0" />
           <element id="library" level="project" name="Gradle: commons-logging:commons-logging:1.2" />
@@ -23,7 +23,6 @@
           <element id="library" level="project" name="Gradle: org.springframework:spring-core:4.2.6.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework:spring-context:4.2.6.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework:spring-beans:4.2.6.RELEASE" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.webjars/Semantic-UI/2.1.8/a1c2cde0d68196b9c2b2fedf7965e0853070a13b/Semantic-UI-2.1.8.jar" />
         </element>
       </element>
       <element id="directory" name="META-INF">

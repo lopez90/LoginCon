@@ -1,15 +1,15 @@
 <%--
   Created by IntelliJ IDEA.
   User: Dom
-  Date: 16.06.2016
-  Time: 18:24
+  Date: 18.06.2016
+  Time: 20:26
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<script src="https://facebook.github.io/react/js/jsfiddle-integration.js"></script>
+<link rel='stylesheet' href='/webjars/Semantic-UI/2.1.8/semantic.min.css'>
 <html>
 <head>
-    <title>Logicon</title>
+    <title>Title</title>
 </head>
 <body>
 <form class="ui form">
@@ -18,16 +18,13 @@
         <input name="name" placeholder="Name" type="text">
     </div>
     <div class="field">
-        <label>Surname</label>
-        <input name="surname" placeholder="Surname" type="text">
-    </div>
-    <div class="field">
-        <label>Birthdate</label>
-        <input name="birthdate" placeholder="Birthdate" type="text">
+        <label>Password</label>
+        <input name="password" placeholder="Password" type="text">
     </div>
     <div class="field">
         <label>Email</label>
         <input name="email" placeholder="Email" type="text">
+    </div>
     </div>
     <button class="ui button" type="submit">Submit</button>
 </form>

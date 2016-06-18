@@ -1,24 +1,19 @@
 package com.logicon.service.impl;
 
-import com.logicon.dto.Address;
-import com.logicon.dto.User;
-import com.logicon.service.interf.UserService;
-
-import java.time.LocalDate;
+import com.logicon.dao.UserDAO;
+import com.logicon.service.interf.IUserService;
 
 /**
- * Created by Dom on 16.06.2016.
+ * Created by Dom on 18.06.2016.
  */
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl implements IUserService {
 
-    public UserServiceImpl(){
-
-    }
+    private UserDAO userDAO = new UserDAO();
 
     @Override
-    public User createUser(String name, String surname, LocalDate birthdate, String email) {
+    public void register(String aName, String aPassword, String aEmail) {
 
-        User newUser= new User(name,surname,birthdate,email);
-        return newUser;
+        userDAO.add(aName,aPassword,aEmail);
     }
+
 }

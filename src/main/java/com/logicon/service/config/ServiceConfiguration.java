@@ -2,7 +2,7 @@ package com.logicon.service.config;
 
 
 import com.logicon.service.impl.UserServiceImpl;
-import com.logicon.service.interf.UserService;
+import com.logicon.service.interf.IUserService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -14,8 +14,9 @@ import org.springframework.context.annotation.Configuration;
 public class ServiceConfiguration {
 
     @Bean
-    public UserService userService(){
+    public IUserService iUserService(){
         return new UserServiceImpl();
     }
+
 
 }
