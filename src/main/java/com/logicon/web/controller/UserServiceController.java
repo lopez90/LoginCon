@@ -2,12 +2,12 @@ package com.logicon.web.controller;
 
 import com.logicon.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.client.RestTemplate;
 
 /**
  * Created by Dom on 18.06.2016.
@@ -27,18 +27,8 @@ public class UserServiceController {
         return "add";
     }
 
-    private static void addUser(String aName, String aPassword,String aEmail) {
-        final String uri = "http://localhost:8080/user/added";
-
-        UserServiceImpl newUser = new UserServiceImpl(aName,aPassword,aEmail);
-        RestTemplate restTemplate = new RestTemplate();
-        UserServiceImpl results = restTemplate.postForObject( uri, newUser , UserServiceImpl.class);
-
-        System.out.println(results);
-    }
-
-    @RequestMapping(value = "/added", method = RequestMethod.POST)
-    public String addUser(@RequestBody UserServiceImpl results)
+    @RequestMapping(value = "/added", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE )
+    public String addUser(@RequestBody json json)
     {
         userServiceImpl.register(results);
         return "add";
