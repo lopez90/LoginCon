@@ -1,9 +1,7 @@
 package com.logicon.web.config;
-import com.logicon.handler.AddUserInterceptor;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
@@ -29,13 +27,4 @@ public class WebConfiguration extends WebMvcConfigurerAdapter {
         registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
     }
 
-    @Bean
-    public  AddUserInterceptor addUserInterceptor(){
-        return new AddUserInterceptor();
-    }
-
-    @Override
-    public void addInterceptors(InterceptorRegistry registry){
-        registry.addInterceptor(addUserInterceptor());
-    }
 }

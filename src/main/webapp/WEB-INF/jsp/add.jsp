@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Dom
@@ -7,6 +8,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <link rel='stylesheet' href='/webjars/Semantic-UI/2.1.8/semantic.min.css'>
+<script src = '/webjars/jquery/2.1.4/jquery.js'></script>
 <html>
 <head>
     <title>Title</title>
@@ -28,5 +30,36 @@
     </div>
     <button class="ui button" type="submit">Submit</button>
 </form>
+
+<script>
+    $('.ui.form').on('submit', function(e){
+        e.preventDefault();
+        $.ajax({
+            url: '<c:url value="/user/added"/>',
+            type: "post",
+            data: formToJSON(),
+            dataType : "json",
+            contentType: 'application/json; charset=utf-8',
+            async: false,
+            success : function(data){
+                if(data.message == "success") {
+                    location.replace("<c:url value="/user/add"/>");
+                }
+            },
+            error : function(xhr, status){
+                console.log(status);
+            }
+        })
+    });
+
+    function formToJSON() {
+        return JSON.stringify({
+            "name": $('.ui.form').form('get value', 'name'),
+            "password": $('.ui.form').form('get value', 'password'),
+            "email": $('.ui.form').form('get value', 'email')
+        })
+    }
+</script>
+
 </body>
 </html>

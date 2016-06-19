@@ -13,6 +13,7 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Gradle: org.springframework:spring-webmvc:4.2.6.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.webjars:jquery:2.1.4" />
           <element id="library" level="project" name="Gradle: org.webjars:Semantic-UI:2.1.8" />
           <element id="library" level="project" name="Gradle: javax.servlet:jstl:1.2" />
           <element id="library" level="project" name="Gradle: aopalliance:aopalliance:1.0" />
