@@ -7,16 +7,7 @@ import com.logicon.dto.User;
  */
 public class UserDAO {
 
-
-
-    public User add (String aName, String aPassword, String aEmail){
-
-        User user = new User();
-        user.setName(aName);
-        user.setPassword(aPassword);
-        user.setEmail(aEmail);
-
+    public User add(User user){
         return user;
     }
-
 }

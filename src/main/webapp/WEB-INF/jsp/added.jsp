@@ -12,5 +12,11 @@
 </head>
 <body>
 <h1>Dodano użytkownika</h1>
+<br>
+<h1>${user.getName()}</h1>
+<br>
+<h1>${user.getEmail()}</h1>
+<br>
+<h1>${user.getPassword()}</h1>
 </body>
 </html>
